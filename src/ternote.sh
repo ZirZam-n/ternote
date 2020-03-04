@@ -3,6 +3,8 @@
 DATA_DIR=~/.ternote
 mkdir -p $DATA_DIR
 
+PROG=`echo $0 | rev | cut -d'/' -f1 | rev`
+
 function list_notes
   {
     for note in `ls $DATA_DIR`
@@ -33,17 +35,33 @@ function delete_note
     rm $DATA_DIR/$1
   }
 
+function print_help
+  {
+    cat <<EOF
+Usage: $PROG l: list notes
+       $PROG n [<note_title>]: add note
+       $PROG p <note_title>: print note
+       $PROG d <note_title>: delete note
+       $PROG <any_thing_else>: show this help
+EOF
+  }
+
 case $1 in
-  "l")
+  l)
     list_notes
     ;;
-  "n")
+  n)
     add_note $2
     ;;
-  "p")
+  p)
     print_note $2
     ;;
-  "d")
+  d)
     delete_note $2
+    ;;
+  *)
+    print_help $0
+    exit 1
+    ;;
 esac
 
