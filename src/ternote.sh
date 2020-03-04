@@ -18,7 +18,14 @@ function print_note
 
 function add_note
   {
-    vim $DATA_DIR/$1
+    if [[ $# -ne 1 ]]
+      then
+        printf "note name? "
+        read note_name
+      else
+        note_name=$1
+    fi
+    vim $DATA_DIR/$note_name
   }
 
 function delete_note
