@@ -21,17 +21,22 @@ function add_note
     vim $DATA_DIR/$1
   }
 
+function delete_note
+  {
+    rm $DATA_DIR/$1
+  }
+
 case $1 in
   "l")
     list_notes
     ;;
   "n")
-    shift
-    add_note $@
+    add_note $2
     ;;
   "p")
-    shift
-    print_note $@
+    print_note $2
     ;;
+  "d")
+    delete_note $2
 esac
 
