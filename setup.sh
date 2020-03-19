@@ -1,6 +1,6 @@
 #!/bin/bash
 
-BINPATH=/usr/bin
+BINPATH=/usr/local/bin
 PROG=`echo $0 | rev | cut -d'/' -f1 | rev`
 
 should_ask=0
