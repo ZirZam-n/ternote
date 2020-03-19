@@ -18,7 +18,7 @@ function print_note
   cat $DATA_DIR/$1
 }
 
-function add_note
+function edit_note
 {
   if [[ $# -ne 1 ]]
     then
@@ -39,7 +39,7 @@ function print_help
 {
   cat <<EOF
 Usage: $PROG l: list notes
-       $PROG n [<note_title>]: add note
+       $PROG e [<note_title>]: add/edit note
        $PROG p <note_title>: print note
        $PROG d <note_title>: delete note
        $PROG <any_thing_else>: show this help
@@ -50,8 +50,8 @@ case $1 in
   l)
     list_notes
     ;;
-  n)
-    add_note $2
+  e)
+    edit_note $2
     ;;
   p)
     print_note $2
