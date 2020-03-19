@@ -4,11 +4,7 @@ Minimal notebook in bash terminal
 This script is based on bash and I've made it in Ubuntu. But I think it can be used in any Linux distro!
 
 ## Requirements
-The following packages are required to run this script:
-
-```
-vim    (to edit notes)
-```
+This script currently doesn't have any requirement. It could simply run with `bash`.
 
 ## Install
 Follow these steps to install and use Ternote:

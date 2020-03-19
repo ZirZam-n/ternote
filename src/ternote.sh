@@ -27,7 +27,7 @@ function edit_note
     else
       note_name=$1
   fi
-  vim $DATA_DIR/$note_name
+  editor $DATA_DIR/$note_name
 }
 
 function delete_note
