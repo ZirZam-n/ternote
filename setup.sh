@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 BINPATH=/usr/local/bin
 PROG=`echo $0 | rev | cut -d'/' -f1 | rev`

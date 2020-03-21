@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 DATA_DIR=~/.ternote
 mkdir -p $DATA_DIR
